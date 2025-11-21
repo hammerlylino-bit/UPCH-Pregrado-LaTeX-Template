@@ -1,0 +1,199 @@
+\documentclass[12pt,a4paper]{report}
+
+%---------------------------------------------------------
+% PAQUETES BÁSICOS
+%---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-nodecimal-separator]{babel}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+%---------------------------------------------------------
+% FORMATO UPCH – MÁRGENES OFICIALES
+% Margen izquierdo: 3.5 cm
+% Margen derecho : 2.5 cm
+% Margen superior: 3.0 cm
+% Margen inferior: 2.5 cm
+%---------------------------------------------------------
+\geometry{
+    a4paper,
+    left=3.5cm,
+    right=2.5cm,
+    top=3.0cm,
+    bottom=2.5cm
+}
+
+% Interlineado 1.5
+\onehalfspacing
+
+% Títulos tamaño 14 pt
+\titleformat{\chapter}{\normalfont\huge\bfseries}{\thechapter}{1em}{}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+
+%---------------------------------------------------------
+% INICIO DEL DOCUMENTO
+%---------------------------------------------------------
+\begin{document}
+
+%---------------------------------------------------------
+% PORTADA OFICIAL FACIEN – UPCH
+%---------------------------------------------------------
+\begin{titlepage}
+\centering
+
+% --- Encabezado institucional ---
+{\Large \textbf{Universidad Peruana Cayetano Heredia}}\\[0.4cm]
+{\large \textbf{Facultad de Ciencias y Filosofía “Alberto Cazorla Talleri”}}\\[1.8cm]
+
+% --- Logo UPCH (colocar logo-upch.png en la carpeta) ---
+\includegraphics[width=7cm]{logo upch.png}\\[3.0cm]
+
+% --- Título de la tesis ---
+{\LARGE \bfseries TÍTULO DE LA TESIS}\\[2.2cm]
+
+% --- Autor ---
+{\large Tesis presentada por}\\[0.4cm]
+{\Large \textbf{Nombre Completo del Autor}}\\[1.4cm]
+
+% --- Título profesional ---
+{\large Para optar el título profesional de}\\[0.4cm]
+{\Large \textbf{Licenciado en …}}\\[2.2cm]
+
+% --- Asesor ---
+{\large Asesor: Dr./Mg. Nombre del Asesor}\\[2.2cm]
+
+% --- Pie de página ---
+{\large Lima, Perú}\\[0.2cm]
+{\large Año}
+
+\end{titlepage}
+
+% Numeración romana para preliminares
+\pagenumbering{roman}
+
+%---------------------------------------------------------
+% REPORTE TURNITIN (OBLIGATORIO)
+%---------------------------------------------------------
+\chapter*{Reporte de similitud Turnitin}
+\addcontentsline{toc}{chapter}{Reporte de similitud Turnitin}
+% Insertar imagen si deseas:
+% \includegraphics[width=\textwidth]{turnitin.png}
+
+%---------------------------------------------------------
+% ÍNDICE
+%---------------------------------------------------------
+\tableofcontents
+\cleardoublepage
+
+% Cambio a numeración arábiga
+\pagenumbering{arabic}
+
+%---------------------------------------------------------
+% RESUMEN EN ESPAÑOL
+%---------------------------------------------------------
+\chapter*{Resumen}
+\addcontentsline{toc}{chapter}{Resumen}
+
+Escribe aquí el resumen en español. Máximo una página.
+
+\textbf{Palabras clave:} palabra1, palabra2, palabra3.
+
+%---------------------------------------------------------
+% ABSTRACT EN INGLÉS
+%---------------------------------------------------------
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Write here the abstract in English. Maximum one page.
+
+\textbf{Keywords:} keyword1, keyword2, keyword3.
+
+%---------------------------------------------------------
+% 1. INTRODUCCIÓN
+%---------------------------------------------------------
+\chapter{Introducción}
+
+Describe el problema, marco teórico, antecedentes y propósito del estudio.
+
+%---------------------------------------------------------
+% 2. HIPÓTESIS / PREGUNTA DE INVESTIGACIÓN
+%---------------------------------------------------------
+\chapter{Hipótesis / Pregunta de Investigación}
+
+Escribe aquí la hipótesis central o la pregunta de investigación.
+
+%---------------------------------------------------------
+% 3. OBJETIVOS
+%---------------------------------------------------------
+\chapter{Objetivos}
+
+\section{Objetivo general}
+Escribe el objetivo general.
+
+\section{Objetivos específicos}
+\begin{enumerate}
+    \item Objetivo específico 1.
+    \item Objetivo específico 2.
+    \item Objetivo específico 3.
+\end{enumerate}
+
+%---------------------------------------------------------
+% 4. MATERIALES Y MÉTODOS
+%---------------------------------------------------------
+\chapter{Materiales y Métodos}
+
+Describe materiales, equipos, muestras, diseño,
+protocolos, análisis estadístico y, si corresponde, tu diagrama de Gantt.
+
+%---------------------------------------------------------
+% 5. RESULTADOS
+%---------------------------------------------------------
+\chapter{Resultados}
+
+Presenta texto + figuras + tablas.
+
+Ejemplo:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{123.png}
+\caption{Leyenda explicativa de la figura.}
+\end{figure}
+
+%---------------------------------------------------------
+% 6. DISCUSIÓN
+%---------------------------------------------------------
+\chapter{Discusión}
+
+Relaciona tus resultados con literatura, explica implicancias,
+limitaciones y aportes.
+
+%---------------------------------------------------------
+% 7. CONCLUSIONES
+%---------------------------------------------------------
+\chapter{Conclusiones}
+
+Redacta conclusiones claras, derivadas de los resultados.
+
+%---------------------------------------------------------
+% 8. REFERENCIAS BIBLIOGRÁFICAS
+%---------------------------------------------------------
+\chapter{Referencias Bibliográficas}
+
+\bibliographystyle{vancouver}
+\bibliography{bibliografia}
+
+%---------------------------------------------------------
+% ANEXOS
+%---------------------------------------------------------
+\appendix
+\chapter{Anexos}
+
+Incluye mapas, tablas extendidas, protocolos, etc.
+
+\end{document}
